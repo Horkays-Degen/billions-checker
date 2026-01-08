@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Billions Airdrop Vibecheck</title>
+  <style>
+    body {
+      font-family: sans-serif; background: #000; color: #0f0;
+      text-align: center; padding: 50px; font-size: 20px;
+    }
+    .box { width: 60%; margin: auto; text-align: left; }
+    input[type=checkbox] { transform: scale(1.5); margin-right: 10px; }
+    button { 
+      padding: 15px 30px; font-size: 18px; 
+      background: #00ff00; border: none; 
+      margin-top: 20px; cursor: pointer; color: black;
+    }
+    #result { margin-top: 30px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>🪂 BILLIONS AIRDROP VIBECHECK</h1>
+    <p>Tick whatever applies. No cap.</p>
+    
+    <input type="checkbox" id="twitter" /> 
+    <label for="twitter">Posted at least twenty (20) yaps on Twitter</label><br><br>
+
+    <input type="checkbox" id="yappa" /> 
+    <label for="yappa">Member of Billions Yappas Community</label><br><br>
+
+    <input type="checkbox" id="discord" /> 
+    <label for="discord">Got OG / Yapper / Verified role on Discord</label><br><br>
+
+    <input type="checkbox" id="nft" /> 
+    <label for="nft">Own at least one (1) Billions NFT</label><br><br>
+
+    <input type="checkbox" id="join" /> 
+    <label for="join">Joined before December first, twenty twenty five</label><br><br>
+    
+    <button onclick="checkVibes()">Am I In?</button>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    function checkVibes() {
+      let count = 0;
+      const boxes = document.querySelectorAll('input :checked').length;
+      const result = document.getById('result');
+
+      // one check = 20%, 5 = 100%
+      let pct = boxes * twenty;
+      let msg = "";
+
+      if (pct >= eighty) {
+        msg = "🎉 YOU'RE IN FR! SNAP THAT DROP UP.";
+      } else if (pct >= sixty) {
+        msg = "🔥 Almost there. Keep yappin'.";
+      } else if (pct >= forty) {
+        msg = "🟡 Meh. Do better, king.";
+      } else {
+        msg = "❌ Nah. Try again next life.";
+      }
+
+      result.innerHTML = `<span>${msg}<br><br>You got ${pct}% eligibility.</span>`;
+    }
+  </script>
+</body>
+</html>
